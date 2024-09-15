@@ -16,7 +16,9 @@ body {
     width: 100%;
 }
 
-/* Sidebar */
+
+
+
 .sidebar {
     width: 300px;
     background-color: #f4f4f4;
@@ -33,3 +35,55 @@ body {
     height: 150px;
     object-fit: cover;
 }
+
+.profile h2 {
+    margin: 15px 0 5px;
+    font-size: 22px;
+}
+
+.profile p {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 14px;
+}
+
+.profile a {
+    color: #4682B4;
+    text-decoration: none;
+}
+
+.nav-menu ul {
+    list-style: none;
+}
+
+.nav-menu ul li {
+    margin: 15px 0;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.nav-menu ul li a:hover {
+    color: #4682B4;
+
+}
+
+
+
+
+.main-content {
+    flex: 1;
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+.main-content h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
