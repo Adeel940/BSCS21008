@@ -5,21 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile - Adeel Zafar</title>
+    <meta name="description" content="Adeel Zafar's portfolio showcasing skills in web development, Unity, React.js, and more. Find details about his education, experience, and projects.">
+    <meta name="keywords" content="Adeel Zafar, web developer, portfolio, Unity, React.js, projects, education, experience">
+    <meta name="author" content="Adeel Zafar">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Adeel Zafar - Web Developer Portfolio">
+    <meta property="og:description" content="Adeel Zafar's web developer portfolio with experience in modern technologies like Unity, React.js, and Ruby on Rails.">
+    <meta property="og:image" content="URL_to_your_image">
+    <meta property="og:url" content="https://adeelzafarportfolio.com">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        function switchLanguage(language) {
+            document.querySelectorAll('.lang-section').forEach((section) => {
+                section.style.display = 'none';
+            });
+            document.querySelectorAll('.lang-section.' + language).forEach((section) => {
+                section.style.display = 'block';
+            });
+
+            if (language === 'ur' || language === 'ar') {
+                document.body.setAttribute('dir', 'rtl');
+            } else {
+                document.body.setAttribute('dir', 'ltr');
+            }
+        }
+    </script>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100" onload="switchLanguage('en')">
 
     <div class="flex h-screen">
 
         <!-- Sidebar with Scroll -->
-        <aside class="w-72 bg-gray-200 p-6 flex flex-col items-center space-y-8 overflow-y-auto h-full">
+        <aside class="w-28 md:w-64 lg:w-72 bg-gray-200 p-3 md:6 lg:6 flex flex-col items-center space-y-8 overflow-y-auto h-full">
+
+            <div class="text-center mb-4">
+                <button onclick="switchLanguage('en')" class="p-2 bg-gray-500 text-black rounded-md">English</button>
+                <button onclick="switchLanguage('ur')" class="p-2 bg-gray-500 text-black rounded-md">Urdu</button>
+                <button onclick="switchLanguage('ar')" class="p-2 bg-gray-500 text-black rounded-md">Arabic</button>
+            </div>
+
             <!-- Profile Section -->
             <div class="text-center">
-                <img src="./myimg.jpg" alt="Profile Picture" class="rounded-full w-40 h-40 object-cover mx-auto">
-                <h2 class="mt-4 text-2xl font-semibold">Adeel Zafar</h2>
+                <img src="./myimg.jpg" alt="Profile Picture" class="rounded-full w-20 h-20 md:w-40 md:h-40 lg:h-40 lg:w-40 object-cover mx-auto">
+                <h2 class="mt-3 md:mt-6 lg:mt-6:text-3xl font-semibold text-gray-700">Adeel Zafar</h2>
                 <p class="mt-1 text-blue-500">Web Developer</p>
             </div>
 
@@ -42,22 +74,27 @@
 
         <!-- Main Content -->
         <main class="flex-1 bg-white p-10 overflow-y-auto">
-            <section id="Home" class="text-center mb-10">
-                <h1 class="text-5xl font-bold">I am a Web-Developer</h1>
+            <section id="Home" class="text-center mb-5 md:mb-10 lg:mb-10">
             </section>
 
             <!-- About Section -->
-            <section id="About" class="mb-10">
-                <h2 class="text-3xl font-semibold mb-4"><i class="fas fa-info-circle"></i> About</h2>
-                <p class="text-lg leading-relaxed text-gray-600">
-                    I am a dedicated and hardworking software engineer with excellent communication skills and the ability to excel under pressure. I have a proven track record of successful teamwork and project completion from my academic experiences at ITU.
+            <section id="About" class="mb-5 md:mb-10 lg:mb-10">
+                <h2 class="text-xl md:text-3xl lg:text-3xl font-semibold mb-4"><i class="fas fa-info-circle"></i> About</h2>
+                <p class="text-sm md:text-lg lg:text-lg leading-relaxed text-gray-600 lang-section en">
+                    I am a dedicated and hardworking Web Developer with excellent communication skills and the ability to excel under pressure. I have a proven track record of successful teamwork and project completion from my academic experiences at ITU.
+                </p>
+                <p class="text-sm md:text-lg lg:text-lg leading-relaxed text-gray-600 lang-section ur" style="display:none;">
+                    میں ایک محنتی ویب ڈویلپر ہوں، جو بہترین مواصلات کی صلاحیتوں اور دباؤ میں کام کرنے کی صلاحیت رکھتا ہوں۔
+                </p>
+                <p class="text-sm md:text-lg lg:text-lg leading-relaxed text-gray-600 lang-section ar" style="display:none;">
+                    أنا مطور ويب مجتهد يتمتع بمهارات تواصل ممتازة والقدرة على التفوق تحت الضغط.
                 </p>
             </section>
 
             <!-- Skills Section -->
-            <section id="Skills" class="mb-10">
-                <h2 class="text-3xl font-semibold mb-4"><i class="fas fa-laptop-code"></i> Skills</h2>
-                <ul class="grid grid-cols-2 gap-4 text-lg">
+            <section id="Skills" class="md-5 md:mb-10 lg:mb-10">
+                <h2 class=" text-xl md:text-3xl lg:text-3xl font-semibold mb-4"><i class="fas fa-laptop-code"></i> Skills</h2>
+                <ul class="grid grid-cols-2 gap-2 md:gap-4 lg:gap-4 md:text-lg lg:text-lg">
                     <li><i class="fas fa-check-circle text-green-500"></i> Unity</li>
                     <li><i class="fas fa-check-circle text-green-500"></i> Maya</li>
                     <li><i class="fas fa-check-circle text-green-500"></i> C++</li>
@@ -72,8 +109,8 @@
             </section>
 
             <!-- Education Section -->
-            <section id="Education" class="mb-10">
-                <h2 class="text-3xl font-semibold mb-4"><i class="fas fa-graduation-cap"></i> Education</h2>
+            <section id="Education" class="mb-5 md:mb-10 lg:mb-10">
+                <h2 class="text-xl md:text-3xl lg:text-3xl font-semibold mb-4"><i class="fas fa-graduation-cap"></i> Education</h2>
                 <div class="mb-4">
                     <p class="font-semibold">Nov 2021 - Present</p>
                     <p>Information Technology University, Lahore (ITU)</p>
@@ -87,8 +124,8 @@
             </section>
 
             <!-- Experience Section -->
-            <section id="Experience" class="mb-10">
-                <h2 class="text-3xl font-semibold mb-4"><i class="fas fa-briefcase"></i> Experience</h2>
+            <section id="Experience" class="mb-5 md:mb-10 lg:mb-10">
+                <h2 class="text-xl md:text-3xl lg:text-3xl font-semibold mb-4"><i class="fas fa-briefcase"></i> Experience</h2>
                 <div class="mb-4">
                     <p class="font-semibold">Jun 2023 – Aug 2023</p>
                     <p>Pakistan Information Technology Board (PITB)</p>
@@ -102,24 +139,24 @@
             </section>
 
             <!-- Projects Section -->
-            <section id="Projects" class="mb-10">
-                <h2 class="text-3xl font-semibold mb-4"><i class="fas fa-project-diagram"></i> Projects</h2>
+            <section id="Projects" class=" mb-5 md:mb-10 lg:mb-10">
+                <h2 class="text-xl md:text-3xl lg:text-3xl font-semibold mb-4"><i class="fas fa-project-diagram"></i> Projects</h2>
                 <div class="flex flex-wrap lg:mt-10 md:mt-10 mt-5 lg:ml-5 md:ml-5 ml-5">
                     <!-- Project Card 1 -->
                     <div class="bg-gradient-to-r from-gray-600 via-gray-800 to-gray-900 lg:w-56 lg:h-72 md:w-52 md:h-64 w-36 h-48 drop-shadow-2xl p-2 rounded-xl shadow-2xl transform transition-transform duration-500 cursor-pointer lg:hover:-translate-x-16 md:hover:-translate-x-16 lg:hover:-translate-y-12 md:hover:-translate-y-12 lg:hover:rotate-12 md:hover:rotate-3 lg:-mr-20 md:-mr-14 mr-10 mt-5">
                         <div class="lg:p-5 p-1">
-                            <h2 class="lg:text-2xl md:text-xl text-lg font-bold text-white">AI Racing Car</h2>
-                            <p class="text-white lg:text-lg md:text-md text-sm">Built using Unity 3D</p>
-                            <p class="text-white lg:text-sm md:text-xs text-xs mt-2">A racing car game where users compete with an AI model on various tracks.</p>
+                            <h2 class="lg:text-2xl md:text-xl  font-bold text-white">AI Racing Car</h2>
+                            <p class="text-white lg:text-lg md:text-md text-sm ">Built using Unity 3D</p>
+                            <p class="text-white lg:text-sm md:text-xs text-xs md:mt-2 lg:mt-3">A racing car game where users compete with an AI model on various tracks.</p>
                         </div>
                     </div>
 
                     <!-- Project Card 2 -->
                     <div class="bg-gradient-to-r from-gray-600 via-gray-800 to-gray-900 lg:w-56 lg:h-72 md:w-52 md:h-64 w-36 h-48 drop-shadow-2xl p-2 rounded-xl shadow-2xl transform transition-transform duration-500 cursor-pointer lg:hover:-translate-x-16 md:hover:-translate-x-16 lg:hover:-translate-y-12 md:hover:-translate-y-12 lg:hover:rotate-12 md:hover:rotate-3 lg:-mr-20 md:-mr-14 mr-10 mt-5">
                         <div class="lg:p-5 p-1">
-                            <h2 class="lg:text-2xl md:text-xl text-lg font-bold text-white">Run Riot</h2>
+                            <h2 class="lg:text-2xl md:text-xl font-bold text-white">Run Riot</h2>
                             <p class="text-white lg:text-lg md:text-md text-sm">Built using Unity 3D</p>
-                            <p class="text-white lg:text-sm md:text-xs text-xs mt-2">A multiplayer running game where users connect via network to compete on diverse tracks.</p>
+                            <p class="text-white lg:text-sm md:text-xs text-xs md:mt-2 lg:mt-3">A multiplayer running game where users connect via network to compete.</p>
                         </div>
                     </div>
 
@@ -128,25 +165,25 @@
                         <div class="lg:p-5 p-1">
                             <h2 class="lg:text-2xl md:text-xl text-lg font-bold text-white">Chess</h2>
                             <p class="text-white lg:text-lg md:text-md text-sm">Built using C++ and OOP</p>
-                            <p class="text-white lg:text-sm md:text-xs text-xs mt-2">A traditional chess game implementing Object-Oriented Programming principles.</p>
+                            <p class="text-white lg:text-sm md:text-xs text-xs md:mt-2 lg:mt-3">A traditional chess game implementing Object-Oriented Programming principles.</p>
                         </div>
                     </div>
 
                     <!-- Project Card 4 -->
                     <div class="bg-gradient-to-r from-gray-600 via-gray-800 to-gray-900 lg:w-56 lg:h-72 md:w-52 md:h-64 w-36 h-48 drop-shadow-2xl p-2 rounded-xl shadow-2xl transform transition-transform duration-500 cursor-pointer lg:hover:-translate-x-16 md:hover:-translate-x-16 lg:hover:-translate-y-12 md:hover:-translate-y-12 lg:hover:rotate-12 md:hover:rotate-3 lg:-mr-20 md:-mr-14 mr-10 mt-5">
                         <div class="lg:p-5 p-1">
-                            <h2 class="lg:text-2xl md:text-xl text-lg font-bold text-white">ShapeShift</h2>
+                            <h2 class="lg:text-2xl md:text-xl font-bold text-white">ShapeShift</h2>
                             <p class="text-white lg:text-lg md:text-md text-sm">Built using HTML, CSS, MySQL, C#</p>
-                            <p class="text-white lg:text-sm md:text-xs text-xs mt-2">A fitness tracker that helps users monitor their workouts and track fitness progress.</p>
+                            <p class="text-white lg:text-sm md:text-xs text-xs md:mt-2 lg:mt-3">A fitness tracker that helps users monitor their workouts and track fitness progress.</p>
                         </div>
                     </div>
 
                     <!-- Project Card 5 -->
                     <div class="bg-gradient-to-r from-gray-600 via-gray-800 to-gray-900 lg:w-56 lg:h-72 md:w-52 md:h-64 w-36 h-48 drop-shadow-2xl p-2 rounded-xl shadow-2xl transform transition-transform duration-500 cursor-pointer lg:hover:-translate-x-16 md:hover:-translate-x-16 lg:hover:-translate-y-12 md:hover:-translate-y-12 lg:hover:rotate-12 md:hover:rotate-3 lg:-mr-20 md:-mr-14 mr-10 mt-5">
                         <div class="lg:p-5 p-1">
-                            <h2 class="lg:text-2xl md:text-xl text-lg font-bold text-white">Weather App</h2>
-                            <p class="text-white lg:text-lg md:text-md text-sm">Built using HTML, Tailwind, React, TypeScrit, Weather Api</p>
-                            <p class="text-white lg:text-sm md:text-xs text-xs mt-2">Weather app with different countries options and forecast for to days ahead and one previous day.</p>
+                            <h2 class="lg:text-2xl md:text-xl font-bold text-white">Weather App</h2>
+                            <p class="text-white lg:text-lg md:text-md text-sm">Built using HTML, Tailwind, React, Weather Api</p>
+                            <p class="text-white lg:text-sm md:text-xs text-xs md:mt-2 lg:mt-2">Weather app with different countries options and forecast for to days ahead and one previous day.</p>
                         </div>
                     </div>
                     
@@ -155,9 +192,9 @@
 
 
             <!-- Hobbies Section -->
-            <section id="Hobbies" class="mb-10">
-                <h2 class="text-3xl font-semibold mb-4"><i class="fas fa-table-tennis"></i> Hobbies</h2>
-                <ul class="text-lg leading-relaxed text-gray-600">
+            <section id="Hobbies" class="mb-5 md:mb-10 lg:mb-10">
+                <h2 class="text-xl md:text-3xl lg:text-3xl font-semibold mb-4"><i class="fas fa-table-tennis"></i> Hobbies</h2>
+                <ul class=" md:text-lg lg:text-lg leading-relaxed text-gray-600">
                     <li><strong>Table Tennis</strong></li> 
                     <li><strong>Traveling</strong></li>
                     <li><strong>Gyming</strong></li>
@@ -166,28 +203,27 @@
 
             <!-- Blogs Section -->
             <section id="Blogs" class="mb-10">
-                <h2 class="text-3xl font-semibold mb-4"><i class="fas fa-blog"></i> Blogs</h2>
+                <h2 class="text-xl md:text-3xl lg:text-3xl font-semibold mb-4"><i class="fas fa-blog"></i> Blogs</h2>
                 <p>Check out my latest blogs coming soon!</p>
             </section>
 
             <!-- Feed Section -->
-            <section id="Feed" class="mb-10">
-                <h2 class="text-3xl font-semibold mb-4"><i class="fas fa-rss"></i> Feed</h2>
+            <section id="Feed" class="mb-5 md:mb-10 lg:mb-10">
+                <h2 class="text-xl md:text-3xl lg:text-3xl font-semibold mb-4"><i class="fas fa-rss"></i> Feed</h2>
                 <a href="https://facebook.com" class="text-blue-600 hover:underline">Facebook</a> |
                 <a href="https://youtube.com" class="text-red-600 hover:underline">YouTube</a>
             </section>
 
             <!-- Contact Section -->
-            <section id="Contact" class="relative mb-10">
+            <section id="Contact" class="relative mb-5 md:mb-10 lg:mb-10">
                 <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
                     <source src="contact.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
                 </video>
                 <div class="relative z-10 p-6 bg-opacity-70 bg-black text-white">
-                    <h2 class="text-3xl font-semibold mb-4"><i class="fas fa-envelope"></i> Contact</h2>
-                    <p><i class="fas fa-phone"></i> +92 300 2069845</p>
-                    <p><i class="fas fa-envelope"></i> BSCS21008@itu.edu.pk</p>
-                    <p><i class="fas fa-map-marker-alt"></i> R-Block, Model Town, Lahore</p>
+                    <h2 class="text-xl md:text-3xl lg:text-3xl font-semibold mb-1 md:mb-4 lg:mb-4"><i class="fas fa-envelope"></i> Contact</h2>
+                    <p class="text-xs md:text-lg lg:text-lg"><i class="fas fa-phone"></i> +92300 2069845</p>
+                    <p class="text-xs md:text-lg lg:text-lg"><i class="fas fa-envelope"></i> BSCS21008@itu.edu.pk</p>
+                    <p class="text-xs md:text-lg lg:text-lg" md:text><i class="fas fa-map-marker-alt"></i> R-Block, Model Town, Lahore</p>
                 </div>
             </section>
             
@@ -195,5 +231,4 @@
     </div>
 
 </body>
-
 </html>
