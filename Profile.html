@@ -3,35 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./output.css">
+    <title>Profile - Adeel Zafar</title>
 </head>
-<body>
-    <div class="container">
-        <aside class="sidebar">
-            <div class="profile">
-                <img src="./myimg.jpg" alt="Profile Picture">
-                <h2>Adeel Zafar</h2>
-                <p>Web Developer</p>
+<body class="bg-gray-100">
+
+    <div class="flex h-screen">
+
+        <!-- Sidebar with Scroll -->
+        <aside class="w-72 bg-gray-100 p-6 flex flex-col items-center space-y-8 overflow-y-auto h-full">
+            <!-- Profile Section -->
+            <div class="text-center">
+                <img src="./myimg.jpg" alt="Profile Picture" class="rounded-full w-40 h-40 object-cover mx-auto">
+                <h2 class="mt-4 text-2xl font-semibold">Adeel Zafar</h2>
+                <p class="mt-2 text-blue-500">Web Developer</p>
             </div>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Skills</a></li>
-                    <li><a href="#">Education</a></li>
-                    <li><a href="#">Experience</a></li>
-                    <li><a href="#">Prjects</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+
+            <!-- Navigation Menu -->
+            <nav class="flex-grow">
+                <ul class="space-y-4 text-center">
+                    <li><a href="#Home" class="text-gray-700 hover:text-blue-500">Home</a></li>
+                    <li><a href="#About" class="text-gray-700 hover:text-blue-500">About</a></li>
+                    <li><a href="#Skills" class="text-gray-700 hover:text-blue-500">Skills</a></li>
+                    <li><a href="#Education" class="text-gray-700 hover:text-blue-500">Education</a></li>
+                    <li><a href="#Experience" class="text-gray-700 hover:text-blue-500">Experience</a></li>
+                    <li><a href="#Projects" class="text-gray-700 hover:text-blue-500">Projects</a></li>
+                    <li><a href="#Hobbies" class="text-gray-700 hover:text-blue-500">Hobbies</a></li>
+                    <li><a href="#Video" class="text-gray-700 hover:text-blue-500">Video</a></li>
+                    <li><a href="#Blogs" class="text-gray-700 hover:text-blue-500">Blogs</a></li>
+                    <li><a href="#Feed" class="text-gray-700 hover:text-blue-500">Feed</a></li>
+                    <li><a href="#Contact" class="text-gray-700 hover:text-blue-500">Contact</a></li>
                 </ul>
             </nav>
         </aside>
 
-        
-        <main class="main-content">
-            <h1>I am a Designer</h1>
+        <!-- Main Content -->
+        <main class="flex-1 bg-white flex flex-col justify-center items-center p-10">
+            <h1 class="text-6xl font-bold mb-4">I am a Web-Designer</h1>
         </main>
+
     </div>
+
 </body>
 </html>
